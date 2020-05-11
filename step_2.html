@@ -1,0 +1,44 @@
+<!-- #######  THIS IS A COMMENT - Visible only in the source editor #########-->
+<script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+        if (document.getElementById("repeatuser").value != document.getElementById("fname").value) {
+            alert("Usernames Do Not Match!")
+        }
+        else if (document.getElementById("repeatpass").value != document.getElementById("fpass").value) {
+            alert("Passwords Do Not Match!");
+        }
+        else {
+            if (confirm("Are you sure you have added the correct Wi-Fi Settings?")) {
+                //document.getElementById("hello").innerHTML = document.getElementById("fname").value;
+                sessionStorage.setItem('ssid', document.getElementById("fname").value);
+                sessionStorage.setItem('pass', document.getElementById("fpass").value);
+                window.location = 'step_3.html';
+            }
+        }
+    }
+</script>
+
+<h2 style="text-align: center;"><span style="color: #800080;">Step 2: Add Wi-Fi Information</span></h2>
+<p id="hello" style="font-size: 1.5em; text-align: center;">&nbsp;Your Pill Bottle uses Wi-Fi credentials to send data.
+    Please fill out this form with the correct information.&nbsp;</p>
+<p style="font-size: 1.5em; text-align: center;">&nbsp;</p>
+<p style="font-size: 1.5em; text-align: center;"><span style="color: #800080;"><strong>Wifi User-Name:</strong></span>
+</p>
+<p style="text-align: center;"><input id="fname" name="user" size="30" type="text"
+        placeholder="Username..." /><br /><br /></p>
+<p style="font-size: 1.5em; text-align: center;"><span style="color: #800080;"><strong>Repeat User-Name:</strong></span>
+</p>
+<p style="text-align: center;"><input id="repeatuser" name="user" size="30" type="text"
+        placeholder="Repeat Username..." /><br /><br /></p>
+<p style="font-size: 1.5em; text-align: center;"><span style="color: #800080;"><strong>Wifi Password:</strong></span>
+</p>
+<p style="font-size: 1.5em; text-align: center;"><span style="color: #800080;"><strong><input id="fpass" name="user"
+                size="30" type="text" placeholder="Repeat Password..." /></strong></span></p>
+<p style="font-size: 1.5em; text-align: center;"><span style="color: #800080;"><strong>Repeat Password:</strong></span>
+</p>
+<p style="font-size: 1.5em; text-align: center;"><span style="color: #800080;"><strong><input id="repeatpass"
+                name="user" size="30" type="text" placeholder="Password..." /></strong></span></p>
+<p style="font-size: 1.5em; text-align: center;">&nbsp;</p>
+<p style="text-align: center;" id="myPopup"><button style="color: #800080;" onclick="myFunction()">Click Here When
+        Finished!</button></p>
