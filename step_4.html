@@ -1,0 +1,80 @@
+<!-- #######  THIS IS A COMMENT - Visible only in the source editor #########-->
+<p>&nbsp;</p>
+<h2 style="text-align: center;" id="hello"><span style="color: #800080;">Step 4: Connect to Ripple Health Wi-Fi</span></h2>
+<h3 style="text-align: center;">&nbsp;Go to your Settings App, and access the Ripple Health Wi-Fi.&nbsp;</h3>
+<p style="text-align: center;"><strong>Please look at video before attempting!</strong></p>
+<script>
+    var user = sessionStorage.getItem("ssid");
+    var pass = sessionStorage.getItem("pass");
+    var i = true
+        //var url = "https://webhook.site/eee29a46-8d9f-47a7-94ff-5c371249a029"
+    var url = "http://www.msftconnecttest.com/setap?ssid=" + user + "&pass=" + pass;
+    setInterval(function() {
+        httpGetAsync(url);
+    }, 3000);
+    //i = false;
+
+
+    function httpGetAsync(theUrl, callback) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(xmlHttp.responseText);
+        }
+        xmlHttp.open("GET", theUrl, true); // true for asynchronous 
+        xmlHttp.send(null);
+    }
+</script>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        /* Create three equal columns that floats next to each other */
+        
+        .column {
+            float: left;
+            width: 48%;
+            padding: 10px;
+            height: 600px;
+            /* Should be removed. Only for demonstration */
+            overflow-x: hidden;
+        }
+        
+        .column1 {
+            float: right;
+            width: 2%;
+            padding: 10px;
+            height: 600px;
+            /* Should be removed. Only for demonstration */
+        }
+        /* Clear floats after the columns */
+        
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="row">
+        <div class="column">
+
+            <p style="text-align: center;"><strong>For Apple Devices:</strong></p>
+            <p><video style=" display: block; margin-left: auto; margin-right: auto; width: 500px; height: 500px; " src="Step_4IOS.MP4 " controls="controls " width="300 " height="150 ">
+        </div>
+        <div class='column1'></div>
+        <div class="column">
+            <p style="text-align: center;"><strong>For Android Devices:</strong></p>
+            <p><video style=" display: block; margin-left: auto; margin-right: auto; width: 500px; height: 500px; " src="Step_4Android.MOV" controls="controls " width="300 " height="150 "></video>
+        </div>
+    </div>
+    </div>
+    <h2 style="text-align: center; " id="button"><span style="color: #800080; "><button style="color: #0932a0; ">And You are Done!</button></span></h2>
+</body>
