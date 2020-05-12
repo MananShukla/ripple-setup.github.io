@@ -1,5 +1,6 @@
 <!-- #######  THIS IS A COMMENT - Visible only in the source editor #########-->
 <script>
+    sessionStorage.setItem("itr", 1);
     // When the user clicks on <div>, open the popup
     function myFunction() {
         if (document.getElementById("repeatuser").value != document.getElementById("fname").value) {
@@ -7,6 +8,16 @@
         }
         else if (document.getElementById("repeatpass").value != document.getElementById("fpass").value) {
             alert("Passwords Do Not Match!");
+        }
+        else if (sessionStorage.getItem("itr") != 2){
+            confirm("Error: Your Wi-Fi Credentials were incorrect. Please write them in again")
+            var elements = document.getElementsByTagName("input");
+                for (var ii=0; ii < elements.length; ii++) {
+                    if (elements[ii].type == "text") {
+                         elements[ii].value = "";
+                    }
+                }
+            sessionStorage.setItem("itr",2);
         }
         else {
             if (confirm("Are you sure you have added the correct Wi-Fi Settings?")) {
