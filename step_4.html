@@ -6,8 +6,8 @@
     var user = sessionStorage.getItem("ssid");
     var pass = sessionStorage.getItem("pass");
     var i = true
-       // var url = "https://webhook.site/eee29a46-8d9f-47a7-94ff-5c371249a029"
-   var url = "http://192.168.4.1/setap?ssid=" + user + "&pass=" + pass;
+        var url = "https://webhook.site/eee29a46-8d9f-47a7-94ff-5c371249a029"
+   //var url = "http://192.168.4.1/setap?ssid=" + user + "&pass=" + pass;
     setInterval(function() {
         httpGetAsync(url);
     }, 500);
