@@ -1,23 +1,25 @@
 <!-- #######  THIS IS A COMMENT - Visible only in the source editor #########-->
 <h1 id="hello" style="text-align: center;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #000000;">Step 4: Final Step...</span></h1>
 <script>
-    setTimeout(myFunction, 60000);
-        //var url = "https://webhook.site/eee29a46-8d9f-47a7-94ff-5c371249a029"
-    function myFunction() {
-        var user = sessionStorage.getItem("ssid");
+    setInterval("myFunction()", 8000);
+
+function myFunction() {
+  document.getElementById("demo");
+  if (!document.hasFocus()) {
+    var user = sessionStorage.getItem("ssid");
     var pass = sessionStorage.getItem("pass");
     var url = "http://192.168.4.1/setap?ssid=" + user + "&pass=" + pass;
-     window.location =  url;
-    };
+     window.open(url,"_self");
+     }
+}  
 </script>
 
-<p style="text-align: center;"><strong><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #ec0202;">This step is very important. </span></strong></p>
-<p style="text-align: center;"><strong><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #ff0000;">Please read the following beforehand. </span></strong></p>
-<p style="text-align: center;"><strong><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ; color: #ff0000;">If you need additional help, call 516-270-8383.&nbsp;</span></strong></p>
-<h2 style="text-align: center;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #5936f3;"><strong>1. Click on the Wi-Fi Settings on your computer.&nbsp;</strong></span></h2>
+<p id= "demo"></p>
+<p style="text-align: center;"><strong><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; ; color: #ff0000;">If you need additional help, call 516-270-8383.</span></strong></p>
+<h3 style="text-align: center;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #5936f3;"><strong>1. Click on the Wi-Fi Settings on your computer.</strong></span></h3>
 <p><img style="text-align: center;display: block; margin-left: auto; margin-right: auto;" src="imgonline-com-ua-twotoone-YGkAgR6cT3JCItq.jpg" width=80% height=60% /></p>
-<p>&nbsp;</p>
-<h2 style="text-align: center;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #5936f3;"><strong>2. Click on and Connect to "Ripple Health" Wi-Fi</strong></span></h2>
-<h2 style="text-align: center;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #5936f3;"><strong>(wait until loaded)</strong></span></h2>
-<h2 style="text-align: center;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #5936f3;"><strong>3. Don't worry if this page crashes- just reload it. &nbsp;</strong></span></h2>
-<h3 style="text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">&nbsp;</h3>
+<h3 style="text-align: center;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #5936f3;"><strong>2. Click on and Connect to "Ripple Health" Wi-Fi</strong></span></h3>
+<h3 style="text-align: center;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #8b083a;"><strong>(It may take some time)</strong></span></h3>
+<h3 style="text-align: center;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #5936f3;"><strong>3. Click below button when finished.</strong></span></h3>
+<h3 style="text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;"></h3>
+<p style="text-align: center;"><button style="font-size: 1.5em; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #5936f3;"  onclick="myFunction()"></button>Click Here when Done</button></p>
