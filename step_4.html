@@ -15,7 +15,8 @@
 
 
     function httpGetAsync(theUrl, callback) {
-        var wnd = window.open(theUrl,"_self");
+        var importantStuff = window.open('', '_blank');
+        importantStuff.location.href = theUrl;
     }
 </script>
 
