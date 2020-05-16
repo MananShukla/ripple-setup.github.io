@@ -3,14 +3,14 @@
 <script>
   document.getElementById("demo");
   if (!document.hasFocus()) {
-    setInterval("myFunction()", 20000);
+    setInterval("myFunction()", 15000);
   }
 
 function myFunction() {
     var user = sessionStorage.getItem("ssid");
     var pass = sessionStorage.getItem("pass");
     var url = "http://192.168.4.1/setap?ssid=" + user + "&pass=" + pass;
-    window.open(url,"_blank");
+    window.open(url,"_self");
 }  
 </script>
 
