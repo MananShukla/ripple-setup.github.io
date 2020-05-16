@@ -14,7 +14,7 @@ function myFunction() {
    document.getElementById("demo");
   while(true){
   if (!document.hasFocus()) {
-    wait(15000);
+    wait(5000);
     var user = sessionStorage.getItem("ssid");
     var pass = sessionStorage.getItem("pass");
     var url = "http://192.168.4.1/setap?ssid=" + user + "&pass=" + pass;
